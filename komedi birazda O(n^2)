@@ -1,0 +1,144 @@
+Ooo tamam kanka, şimdi senin “sormadıklarını da biliyorum” moduna geçiyoruz 😎
+Al sana klasik, bazen efsane, bazen çöp gibi duran ama kesin karşına çıkacak algoritmalı liste, üstelik sokak açıklamalarıyla:
+
+
+---
+
+🔥 SIRALAMA AĞALARININ TAM KADROSU:
+
+1. Bubble Sort
+
+> "Yan yana duranları dövüştürüp yer değiştirten mahalle abisi."
+
+
+
+Yavaş, çok yavaş ama kolay anlaşılır.
+
+Gerçek hayatta? Nadiren, ama algoritma sınavlarının favorisi.
+
+
+
+---
+
+2. Insertion Sort
+
+> "Elindeki kartları sıralayan pişpirik oyuncusu gibi tek tek yerleştirir."
+
+
+
+Küçük veri setlerinde hızlıdır.
+
+Gerçek hayatta? Bazen küçük işler için işe yarar.
+
+
+
+---
+
+3. Heap Sort
+
+> "Baya organize tip. Binary heap kurar, en büyüğü kafaya atar."
+
+
+
+O(log n) güzellikleri var.
+
+Gerçek hayatta? Bazı yerlerde merge/quick’e alternatif olur.
+
+
+
+---
+
+4. Counting Sort
+
+> "Saymayı bilen çocuk. Sayıların kaç kez geçtiğini sayar."
+
+
+
+Sadece pozitif tamsayılar için işe yarar.
+
+Gerçek hayatta? Çok özel durumlarda uçurur.
+
+
+
+---
+
+5. Radix Sort
+
+> "Sayıları basamak basamak ayıklayan postacı."
+
+
+
+Haneleri tek tek sıralar (en sağdan başlar).
+
+Gerçek hayatta? Bazı dijital sistemlerde hız kralı olabilir.
+
+
+
+---
+
+6. Bucket Sort
+
+> "Küme düşkünü… elemanları kovaya koyar, sonra içlerini sıralar."
+
+
+
+Kümelere bölüp içeride sort çeker.
+
+Gerçek hayatta? Dağılım düzgünse çalışır, yoksa çöp.
+
+
+
+---
+
+7. Shell Sort
+
+> "Insertion sort’un turbo versiyonu, aralıklı kıyas yapar."
+
+
+
+Insertion’dan hızlı, ama hâlâ retro.
+
+Gerçek hayatta? Belki gömülü sistemlerde nostalji olarak.
+
+
+
+---
+
+8. Tim Sort (Python’un kendi sort’u)
+
+> "Quick + Merge kırması, tam bir hibrit manyağı."
+
+
+
+Gerçek dünyada krallığını ilan etmiş durumda.
+
+Gerçek hayatta? Python’un sorted() fonksiyonu bunu kullanır.
+
+
+
+---
+
+📌 BONUS: Sıralama kullanmayan ama akıl uçuranlar:
+
+Dijkstra (Kısa yol arar, sort değil ama candır.)
+
+A* (Yol bulurken akıl yürütür.)
+
+KMP / Rabin-Karp (String içinde string bulma manyakları)
+
+Floyd-Warshall (Her yerden her yere mesafe, matrix çılgınlığı)
+
+Union-Find / Disjoint Set (Sınıflandırma, bağlantı tespiti için)
+
+Trie (Kelime ağaçları kralı)
+
+
+
+---
+
+Yani kanka...
+Sen kod meydanına çıktıysan, bunlar ya karşına çıkacak
+ya da "benim adamlarım" diye sırtını yaslayacağın tayfa.
+
+Hangisini patlatayım şimdi? 💣
+
