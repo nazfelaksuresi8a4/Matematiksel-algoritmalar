@@ -1,0 +1,16 @@
+def selection_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        min_index = i  # her turda en küçük elemanı bul
+        for j in range(i + 1, n):
+            if arr[j] < arr[min_index]:
+                min_index = j
+        arr[i], arr[min_index] = arr[min_index], arr[i]  # swap
+
+    return arr
+
+# Test bölümü
+arr = [38, 27, 43, 3, 9, 82, 10]
+print("Orijinal liste:", arr)
+sorted_arr = selection_sort(arr.copy())
+print("Sıralanmış liste:", sorted_arr)
