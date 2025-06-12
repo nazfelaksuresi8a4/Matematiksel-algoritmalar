@@ -2,21 +2,26 @@
 
 #pythonda medyan sayı bulma algoritması#
 
-liste = [10,6,4,5,2,37,6,107]
-
-seri = sorted(liste)
-
-seri.remove(max(seri))
-seri.remove(min(seri))
-
-n = len(seri)
-
-def medyan_hesapla(array):
+def medyan_bul(dizi):
+    
+    sorted_array = sorted(dizi)
+    
+    sorted_array.remove(max(sorted_array))
+    sorted_array.remove(min(sorted_array))
+    
+    n = len(sorted_array)
+    
+   
     if n == 0:
-        return 0
-    elif n %2 == 0:
-        return (seri[n // 2 - 1] + seri[n // 2]) // 2
+            return 0
+            
+    elif n % 2 == 0:
+            return (sorted_array[n // 2 - 1] + dizi[n//2]) / 2
+        
     else:
-        return (seri[n // 2])
-                 
-print(medyan_hesapla(seri))    
+            return (sorted_array[n // 2])
+
+liste = [0,1,4,7,6,8,58,6,9,0]
+print(medyan_bul(liste))       
+    
+    
