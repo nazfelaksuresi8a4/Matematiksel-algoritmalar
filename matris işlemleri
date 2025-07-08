@@ -1,3 +1,6 @@
+from random import randint
+from time import sleep
+
 i = 1
 var =  None
 index = None
@@ -17,8 +20,8 @@ def main():
     init = [[],
             []]
     
-    var_prompt = int(input(f'sayı sırası: {len(buffer)}\n\nkaçıncı sıradaki sayıları işlemek istersin: '))
-    index_prompt = int(input('hangi sayıya gelinince sayım dursun: '))
+    var_prompt = int(input(f'\nsayı sırası: {len(buffer)}\n\nkaçıncı sıradaki sayıları işlemek istersin: '))
+    index_prompt = int(input('\nhangi sayıya gelinince sayım dursun: '))
     
     init[0].append(var_prompt)
     init[1].append(index_prompt)
@@ -52,8 +55,15 @@ def f(x):
                 else:
                     if [scoped_x[j]] == var: 
                         break
-
-                    buffer[0].append(scoped_x[j])    
+                    
+                    else: 
+                        if scoped_x[j] <= 0:
+                            normalize = scoped_x[j] + randint(0,len(scoped_x))
+                             
+                            buffer[0].append(scoped_x[j] - normalize)
+                       
+                        else:
+                            buffer[0].append(scoped_x[j])   
 
         if index == [2]:
             for _ in range(len(scoped_x)):
@@ -76,6 +86,19 @@ def f(x):
 
     return procces(fx=scoped_x)
 
-formula = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 
-print(f(x=formula))
+
+formula = [randint(-50,50) for _ in range(100)]
+chunk = 0
+
+function = f(x=formula)
+
+print(f'\n\ndizide {var} sayısına gelene kadarki sayılar:\n')
+
+for k in function:
+        
+    print(f'\n{function[chunk]}')
+    
+    chunk += 1
+    
+    
