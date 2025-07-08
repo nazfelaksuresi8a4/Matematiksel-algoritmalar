@@ -1,0 +1,60 @@
+i = 1
+var =  None
+index = None
+user_formula = None
+
+buffer = [[],
+          []]
+
+var_prompt = int(input(f'sayı sırası: {len(buffer)}\n\nkaçıncı sıradaki sayıları işlemek istersin: '))
+index_prompt = int(input('hangi sayıya gelinince sayım dursun: '))
+
+var = index_prompt
+index = var_prompt
+
+buffer_variable = None
+
+def f(x):
+
+    scoped_x = x 
+
+    def procces(fx):
+        global i
+        global buffer
+        global buffer_variable
+
+        if index == 1:
+            for j in range(len(scoped_x)):
+                if scoped_x[j] == var: 
+                    break
+                
+                else:
+                    if scoped_x[j] == var: 
+                        break
+
+                    buffer[0].append(scoped_x[j])    
+
+        if index == 2:
+            for _ in range(len(scoped_x)):
+                if scoped_x[i] == var:    
+                    break
+                
+                else:
+                    buffer[1].append(scoped_x[i])
+
+                
+            if i >= len(scoped_x) - 1:
+                i = 1
+
+            i += 1
+
+        if len(buffer) != 0:
+            buffer_variable_x,buffer_variable_y = buffer[0].copy(), buffer[1].copy()
+
+            return buffer_variable_x, buffer_variable_y
+    
+    return procces(fx=scoped_x)
+
+formula = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+
+print(f(x=formula))
