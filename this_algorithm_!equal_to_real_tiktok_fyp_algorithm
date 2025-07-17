@@ -1,0 +1,29 @@
+from random import randint
+from time import sleep
+
+monospace = " "
+
+class side:
+    def generator():
+        f = randint(0, 10) 
+        y = randint(0, 20) 
+        p = randint(0, 40) 
+        
+        return [f, y, p]
+
+max_len = 50
+       
+while True:
+    sleep(0.5)
+    
+    generator_data = side.generator() 
+    
+    spaces =[ 
+        " "*int(generator_data[0]), 
+        " "*int(generator_data[1]), 
+        " "*int(generator_data[2])]
+    
+    print(f"\033[1;0Hf = {generator_data[0]}{spaces[0]}",end="\r")
+    print(f"\033[2;0Hy = {generator_data[1]}{spaces[1]}",end="\r")
+    print(f"\033[3;0Hp = {generator_data[2]}{spaces[2]}",end="\r")    
+    
