@@ -1,0 +1,45 @@
+import matplotlib.pyplot as plt
+
+radius_out = 10
+radius_inner = 10
+value = 9
+
+def vector(ro,ri,v):
+    global matrix_1
+    global matrix_2 
+    matrix_1 = []
+    matrix_2 = [] 
+    
+    for rad_out in range(ro):
+        matrix_1.append([v]*ri)    
+        matrix_2.append([v]*ri) 
+    
+    yield (matrix_1, matrix_2) 
+
+for fnc in vector(radius_out, radius_inner, value):
+    matrix_1, matrix_2 = fnc 
+
+length = len(matrix_1) 
+
+for mat in range(len(matrix_1)):
+    length -= 1 
+    
+    matrix_1[mat][mat] = 1
+    matrix_1[length][mat] = 1
+
+plt.style.use("dark_background")
+#plt.set_cmap("gray")
+
+fig,ax = plt.subplots(nrows=2,ncols=1)
+
+ax[0].set_title("Original matrix")
+ax[1].set_title("Crossed matrix")
+
+ax[0].axis("off")
+ax[1].axis("off")
+
+ax[0].imshow(matrix_2)
+ax[1].imshow(matrix_1)
+
+plt.show()
+    
