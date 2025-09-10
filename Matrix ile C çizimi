@@ -1,0 +1,42 @@
+from time import sleep
+
+vector = []
+
+radius = 10
+value = 0
+
+def create_matrix(rad,val):
+    for rad_val in range(rad):
+        vector.append([val]*rad)
+    
+    return vector
+
+matrix_function = create_matrix(radius,value)
+length = len(matrix_function)
+
+def insert_cube(matrix_len,matrix_rad,matrix_val):
+    rad = matrix_rad  
+    for i in range(matrix_len):
+        if i == 0:
+            matrix_function[i] = 0 
+            matrix_function.remove(0)
+            matrix_function.insert(i,[1]*rad)
+        
+        elif i != 0 and i != matrix_len - 1:
+            index = matrix_function[i].index(matrix_val)
+            matrix_function[i].remove(matrix_val)
+            matrix_function[i].insert(index,1)
+        
+        else:
+            matrix_function[i].clear()
+            for r in range(rad):
+                matrix_function[i].insert(index,1)
+
+
+    return matrix_function
+
+cube_function = insert_cube(length,radius,value)
+
+for cube in cube_function:
+    print(cube)
+ 
