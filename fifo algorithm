@@ -1,0 +1,10 @@
+lst = [l for l in range(100)]
+
+index = 0
+frame = 10
+
+while index + frame <= len(lst):
+    index += frame
+    q = lst[index:index + frame]
+    print(q) 
+    
