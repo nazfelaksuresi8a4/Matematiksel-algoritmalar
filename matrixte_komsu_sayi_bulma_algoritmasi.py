@@ -42,3 +42,8 @@ if p_output is not None:
         a, t, n = out
         
         print(f"| {a} | hedef: {t} | komşu: {n} |")
+
+
+
+#DİKKAT: maximum veri seti hacmi: 1950 satır
+#Zaman karmaşıklığı: O(n*m) complex
