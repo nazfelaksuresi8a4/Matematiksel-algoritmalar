@@ -11,14 +11,14 @@ def find(matrix,target,neighbors,shape=None):
             for i in range(0,n):
                 for j in range(1,len(matrix[i])):
                     if matrix[i][j - 1] == target and matrix[i][j] == neighbor:
-                        paths.append((matrix[i][j - 1], matrix[i][j])) 
+                        paths.append(("axis: x ",matrix[i][j - 1], matrix[i][j])) 
                 
         
         elif shape == "y-axis":
             for i in range(1, n):
                 for j in range(1, len(matrix[i])):
                     if matrix[i - 1][j - 1] == target and matrix[i][j - 1] == neighbor:
-                        paths.append((matrix[i - 1][j - 1], matrix[i][j - 1])) 
+                        paths.append(("axis: y ",matrix[i - 1][j - 1], matrix[i][j - 1])) 
         
         return paths
     
@@ -29,8 +29,16 @@ matrix = [[1,0,1,4,0,0],
           [4,0,0,3,5,9]]   
 target = 1
 neighbor = 4
-shape = "y-axis"
+shapes = ["x-axis", "y-axis"]
 
-path_output = find(matrix, target, neighbor,shape) 
+p_output = None
 
-print(path_output)  
+for shape in shapes:
+    p_output= find(matrix, target, neighbor,shape) 
+
+print("BULUNAN KOMŞULAR VE EKSENLERİ\n\n") 
+if p_output is not None:
+    for out in p_output:
+        a, t, n = out
+        
+        print(f"| {a} | hedef: {t} | komşu: {n} |")
