@@ -1,0 +1,46 @@
+formül;
+
+self.q = doğrusal artan tamsayı
+rect = dikdörtgen açıları
+r = çizgi yarıçapı
+rad = radyans fonksiyonu çıktısı 
+cx = x ekseni 
+xy = y ekseni 
+cos(0) = x ekseni kosinüs fonksiyonu 
+sin(0) = y ekseni sinüs fonksiyonu
+
+x = I1
+y = I2
+
+-----------------------------------------------------
+yerine koyulmuş formül;
+------------------------
+
+self.q = 0  # += 1 şeklinde artış gösterecek 
+r = 100
+rect = self.rect().adjusted(50,50,500,500).center()
+rad = math.radians(self.q)
+cx = rect.x()
+cy = rect.y()
+cos(0) = math.cos(rad)
+sin(0) = math.sin(rad)
+
+x = cx + (r * cos)
+y = cx + (r * sin)
+
+-----------------------------------------------------
+
+-------------------------------------------------------------
+çizim için ise; 
+---------------------
+
+self.timer = QTimer(self)
+self.timer.timeout.connect(self.update)
+self.timer.start(50) #50 / 100 = 0,5 ms'lik bir çağırılma hızı
+
+def paintEvent(self,a0):
+    painter.drawLine(center,QPointF(x,y))
+    
+    self.q += 1
+
+-------------------------------------------------------------
