@@ -1,0 +1,30 @@
+import numpy as np
+import math
+import matplotlib.pyplot as plt
+
+pi = math.pi
+mx = 180
+
+r1 = math.sin(math.radians(pi))
+
+a1 = []
+
+prot = True
+maxf = math.sin(math.radians(pi)) * mx
+
+while prot:
+    if len(a1) > 1:    
+        if a1[len(a1) - 1]  > maxf:
+            prot = False
+    
+    print(sum(a1))
+
+    plt.plot(a1,c='blue',linewidth=2)
+
+    a1.append(r1)
+
+    r1 += r1
+
+    plt.pause(0.1)
+
+plt.show()
