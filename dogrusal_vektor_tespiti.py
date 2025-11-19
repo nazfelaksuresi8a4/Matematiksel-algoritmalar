@@ -1,12 +1,15 @@
 #**1**#
 #Bu kod sadece bir prototipi temsil eder gerçek projelerde daha güvenli versiyonları kullanılmaktadır, kullanılmalıdır!!!! 
 
+#Formül = Q[i] - Q[i - 1] == T
+#Negatif-Pozitif karmaşık artış/azalış doğrusallığı var ise(parçalı doğrusal vektör) np.abs(Q[i] - Q[i - 1]) == T
+
 T = 1   #T sabiti 
 index = 0
 K = [1,2,3,4,5,4,4,6]
 
 for i in range(len(K)):
-    if K[i] - K[i - 1] = R:
+    if K[i] - K[i - 1] = T:
         index += 1
     
 if index == len(K) - 1:
