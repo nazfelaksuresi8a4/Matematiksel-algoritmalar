@@ -1,0 +1,20 @@
+a = [q * 5 for q in range(100)]
+d = None
+n = 10
+
+index = 0
+
+while index < len(a) - 4:
+    if index >= 20:
+        d = a[index:index + n]
+    
+    if d is not None:
+        print(d) 
+    
+    else:
+        if index > 1:
+           print(a[:index]) 
+    
+    index += n
+
+#n sabitine göre artış gösteriyor
