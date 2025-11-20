@@ -1,0 +1,20 @@
+#ilk giren ilk çıkar mantığına dayanan bu algoritmanın en basit yazımı şü şekildedir
+
+a = []
+d = None
+n = 2000
+
+index = 0
+
+while index <= n:
+    if len(a) >=21:
+        a.pop(0) 
+    
+    print(a) 
+    
+    a.append(index*n) 
+    
+    index += 10
+
+
+#bu koddaki döngü kaba tabiri ile şu şekilde açıklanabilir; "büyüklük x i geçerse ilk eleman çıkarılıypr ve büyüklük x - 1 oluyor tekrar append alıyor ve büyüklük = x oluyor sonra tekrardan en baştaki çıkarılıyor"
