@@ -1,8 +1,9 @@
-"""" User Input Dide """"
+""" User Input Side """
 denklem = str(input("> "))
 
 x1 = 1
 x2 = 1
+arrindex = 0
 
 splitted = denklem.split()
 
@@ -10,22 +11,21 @@ equality = splitted.pop()
 nums = []
 arr = [] 
 
-"""" Number Parser Side """
-for sayi in splitted:
-    if sayi[0].isdigit():
-        n = len(sayi)
+for m in splitted:
+    if m.replace("x","").isdigit() == True:
+        arr.append([]) 
+
+matrix_length = len(arr) 
+
+
+""" Number Parser Side """
+for xi in range(len(splitted)):
+    if splitted[xi].replace("x","").isdigit() == True:
+        arr[arrindex].append(int(splitted[xi].replace("x", "").strip()))
         
-        try:
-            for recnum in range(n):
-                if sayi[recnum].isdigit() == True:
-                    arr.clear() 
-                    arr.append(sayi[recnum])
+        arrindex += 1
+
+print(arr)     
         
-            for arrnum in arr:
-                nums.append(int("".join([arrnum])))
-                
-        except Exception as e0:
-            print(f"Parser Exception with line 26: {e0}") 
-                
-print(nums)
+    
     
