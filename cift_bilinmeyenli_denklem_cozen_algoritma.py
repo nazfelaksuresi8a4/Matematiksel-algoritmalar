@@ -1,3 +1,4 @@
+"""" User Input Dide """"
 denklem = str(input("> "))
 
 x1 = 1
@@ -9,6 +10,7 @@ equality = splitted.pop()
 nums = []
 arr = [] 
 
+"""" Number Parser Side """
 for sayi in splitted:
     if sayi[0].isdigit():
         n = len(sayi)
@@ -26,3 +28,4 @@ for sayi in splitted:
             print(f"Parser Exception with line 26: {e0}") 
                 
 print(nums)
+    
