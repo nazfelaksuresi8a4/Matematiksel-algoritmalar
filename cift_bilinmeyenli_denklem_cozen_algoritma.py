@@ -34,8 +34,8 @@ for xi in range(len(splitted)):
         arrindex += 1
         
 
-#arr = nums
-#symbols = symbolss
+#arr = num
+#symbols = symbols
 
 """Solver Side"""
 for symindex,numindex in zip(range(len(symbols)),range(len(arr))):
@@ -45,12 +45,14 @@ for symindex,numindex in zip(range(len(symbols)),range(len(arr))):
                 x2 += 1
             
             else:
+                if frame == 500:
+                    frame = 500
+                
+                else:
+                    frame *= 2
+
                 x2 = 1
                 x1 += 1
-                print('pass')
-            
-                frame *= 2
-            
 
 print(f'Denklem: {denklem}\nÇözüm: x1 = {x1}, x2 = {x2}')
 
