@@ -22,12 +22,12 @@ def bul(dizi,hedef):
     gorulenler = {}
 
     for i,num in enumerate(dizi):
-        kalan = hedef - dizi[i]
+        kalan = hedef - num
 
         if kalan in gorulenler:
-            return gorulenler[kalan],gorulenler[hedef-kalan]
+            return gorulenler[kalan],i
 
-        gorulenler[kalan] = i
+        gorulenler[num] = i
 
     return -1
 
@@ -44,10 +44,9 @@ def bul(dizi,hedef):
     n = len(dizi)
 
     for i in range(n):
-        for j in range(n - i - 1):
-            kalan = hedef - dizi[j]
-            if kalan in dizi:
-                return j,dizi.index(kalan)
+        for j in range(i+1,n):
+            if dizi[i] + dizi[j] == hedef:
+                return i,j
 
 dizi = [6,2,6472,72,754,75,275,257,257,2]
 hedef = (72+257)
